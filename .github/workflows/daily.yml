@@ -24,6 +24,6 @@ jobs:
           pip install -r requirements.txt
 
       - name: Execute script
-        run: pwd && ls && python senKongDao.py
+        run: python SenKongDao.py
 
 
