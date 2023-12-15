@@ -14,7 +14,7 @@ jobs:
       - name: create config.txt
         run: |
           touch SenKongDao_config.txt
-          echo Token={{ secrets.Token }} >> SenKongDao_config.txt
+          echo Token= ${{ secrets.Token }} >> SenKongDao_config.txt
           pwd
           cat SenKongDao_config.txt
       - name: Checkout repository
