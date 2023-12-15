@@ -20,12 +20,14 @@ jobs:
           python-version: "3.10"
       - name: Install dependencies
         run: |
-          touch SenKongDao_config.txt
-          echo ${{ secrets.Token }} >> SenKongDao_config.txt
-          pwd
-          cat SenKongDao_config.txt
+
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Execute script
-        run: ls && python SenKongDao.py
+        run: |
+          touch SenKongDao_config.txt
+          echo ${{ secrets.Token }} >> SenKongDao_config.txt
+          pwd
+          cat SenKongDao_config.txt
+          ls && python SenKongDao.py
