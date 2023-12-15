@@ -1,8 +1,11 @@
 name: Cron
 
 on:
-  schedule:
-    - cron: "28 * * * *"
+  push:
+    branches:
+      - 'main'
+#  schedule:
+#    - cron: "25 * * * *"
 
 jobs:
   build:
