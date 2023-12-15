@@ -6,7 +6,7 @@ import datetime
 import headersGenerator
 import requests
 import constants
-
+from urllib.parse import unquote
 # 常量引入
 success_code = constants.success_code
 sleep_time = constants.sleep_time
@@ -26,7 +26,7 @@ time.sleep(sleep_time)
 
 # 遍历cookie
 for cookie_line in cookie_lines:
-
+    cookie_line = unquote(cookie_line)
     # 准备签到信息
     configs = cookie_line.split("&")
     uid = configs[0].strip()
