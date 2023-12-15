@@ -15,6 +15,7 @@ jobs:
         run: |
           touch SenKongDao_config.txt
           echo Token={{ secrets.Token }} >> SenKongDao_config.txt
+          pwd
           cat SenKongDao_config.txt
       - name: Checkout repository
         uses: actions/checkout@v4
