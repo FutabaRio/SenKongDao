@@ -30,4 +30,4 @@ jobs:
           pip install -r requirements.txt
 
       - name: Execute script
-        run: python SenKongDao.py
+        run: ls && python SenKongDao.py
