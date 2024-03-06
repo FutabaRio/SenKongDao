@@ -27,4 +27,4 @@ jobs:
           echo ${{ secrets.Token }} >> SenKongDao_config.txt
           pwd
           cat SenKongDao_config.txt
-          ls && python SenKongDao.py
+          python SenKongDao.py
