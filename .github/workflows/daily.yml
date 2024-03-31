@@ -25,5 +25,5 @@ jobs:
           touch SenKongDao_config.txt
           echo ${{ secrets.Token }} >> SenKongDao_config.txt
           cat SenKongDao_config.txt
-          echo "1111"
+          ls -a
           python SenKongDao.py
