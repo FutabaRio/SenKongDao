@@ -1,8 +1,7 @@
 name: Cron
 
 on:
-  schedule:
-    - cron: "0 0 * * *"
+  push
 
 jobs:
   build:
@@ -26,4 +25,5 @@ jobs:
           touch SenKongDao_config.txt
           echo ${{ secrets.Token }} >> SenKongDao_config.txt
           cat SenKongDao_config.txt
+          echo "1111"
           python SenKongDao.py

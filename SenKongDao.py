@@ -8,6 +8,7 @@ import requests
 import constants
 from urllib.parse import unquote
 # 常量引入
+print("任务开始")
 success_code = constants.success_code
 sleep_time = constants.sleep_time
 sign_url = constants.sign_url
