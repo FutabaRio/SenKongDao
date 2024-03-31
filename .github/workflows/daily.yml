@@ -23,9 +23,8 @@ jobs:
       - name: Execute script
         run: |
           touch SenKongDao_config.txt
-          echo ${{ secrets.Token }}
-          echo ${{ secrets.Token }} > SenKongDao_config.txt
-          ls -a 
+          echo "${{ secrets.Token }}"
+          echo "${{ secrets.Token }}" > SenKongDao_config.txt
       - name : run python
         run: 
           python SenKongDao.py
