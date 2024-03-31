@@ -24,8 +24,8 @@ jobs:
         run: |
           touch SenKongDao_config.txt
           echo ${{ secrets.Token }} > SenKongDao_config.txt
-          cat SenKongDao_config.txt
-          ls -a
+          pwd
+          ls -a 
       - name : run python
         run: 
           python SenKongDao.py
