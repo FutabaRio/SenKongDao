@@ -23,8 +23,8 @@ jobs:
       - name: Execute script
         run: |
           touch SenKongDao_config.txt
+          echo ${{ secrets.Token }}
           echo ${{ secrets.Token }} > SenKongDao_config.txt
-          pwd
           ls -a 
       - name : run python
         run: 
